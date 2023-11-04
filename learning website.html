@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: linear-gradient(to right,black,white);
+        }
+        
+        .nav{
+            height: 60px;
+            width: 100%;
+            background-color: #1111116c;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1em;
+            position: relative;
+            overflow: hidden;
+        }
+        .nav h2{
+            /* padding: 1em; */
+            font-size: 1.8em;
+            color: aliceblue;
+        }
+        .link{
+            display: flex;
+            gap: 10px;
+            font-size: 1.2rem;
+        }
+        .link a{
+            color: aqua;
+            text-decoration: none;
+        }
+        .main{
+            min-height: calc(90vh - 60px);
+            width: 100%;
+            /* padding: 1.5rem; */
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        /* aside */
+        .left{
+            height: 100%;
+            width: 40rem;
+            justify-content: space-around;
+        }
+        .left h2{
+            font-size: 6vw;
+            line-height: 8vw;
+            /* font-size: 4rem;
+            line-height: 4rem; */
+            color: white;
+        }
+        .left h2 span{
+            font-size: 9vw;
+            /* font-size: 5rem; */
+            font-weight: 800;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: aqua;
+            filter: drop-shadow(0 0 7px #00FFFF);
+        }
+        .left p{
+            font-size: 1.7vw;
+            color: #ffffff81;
+            font-style: italic;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .left button{
+            padding: 0.6vw 1.5vw;
+            font-size: 13px;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            filter: drop-shadow(0 0 5px #888DF5);
+        }
+        .social{
+            gap: 1.5vw;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            font-size: 2vw;
+            filter: drop-shadow(0 0 5px #00FFFF)
+        }
+        .right{
+            height: 30%;
+            width: 40rem;
+            position: relative;
+            display: inline;
+            justify-content: space-around;
+        }
+        .right img{
+            height: 100%;
+            width: 100%;
+        }
+
+        @media (orientation: landscape) {
+            .main{
+                padding: 20px;
+            }
+        }
+
+        @media (max-width:600px) {
+            body{
+                background: #272727;
+            }
+            .link a{
+            color: aqua;
+            text-decoration: none;
+            font-size: 4vw;
+        }
+        .main{
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .left{
+            height: 100%;
+            width: 95vw;
+            margin-top: 10vw;
+            padding: 0;
+        }
+        .left h2{
+            font-size: 12vw;
+            line-height: 15vw;
+            color: white;
+        }
+        .left h2 span{
+            font-size: 18vw;
+            font-weight: 800;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: aqua;
+        }
+        .left p{
+            font-size: 4vw;
+            color: #ffffff81;
+            font-style: italic;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .left button{
+            padding: 1vw 2vw;
+            font-size: 10px;
+            border-radius: 5px;
+        }
+        .social{
+            gap: 1.5vw;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            font-size: 4vw;
+        }
+        .right{
+            height: 30%;
+            width: 95vw;
+        }
+        
+            
+
+
+        }
+
+    </style>
+</head>
+<body>
+        <div class="nav">
+            <h2>Logo</h2>
+            <div class="link">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">News</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <div class="main">
+            <div class="left">
+                <h2>This Is My <span>Website.</span></h2><br>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio veritatis optio quisquam nemo voluptatum quasi nesciunt quae exercitationem eligendi ut commodi repellat qui, recusandae adipisci excepturi, officiis consectetur repudiandae expedita!</p><br>
+                <button>More</button><br><br>
+                <div class="social">
+                    <i class="ri-bookmark-fill" title="bookmark"></i>
+                    <i class="ri-whatsapp-line" title="whatsapp"></i>
+                    <i class="ri-twitter-line" title="twitter"></i>
+                </div>
+            </div>
+            <div class="right">
+                <img src="./Coding.png" alt="">
+            </div>
+        </div>
+</body>
+</html>

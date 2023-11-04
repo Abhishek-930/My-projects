@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            background: #111;
+            display: grid;
+            place-items: center;
+        }
+        div{
+            position: relative;
+            height: 200px;
+            width: 200px;
+            border-radius: 5px;
+            background: #2e2e2e;
+            box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        div::before{
+            content: '';
+            position: absolute;
+            height: 150%;
+            width: 150%;
+            left: -25%;
+            top: -25%;
+            border-radius: 5px;
+            background-image: conic-gradient(#00c3ff 20deg,
+             transparent 120deg);
+             animation: rotate 3s linear infinite;
+             
+        }
+        @keyframes rotate{
+            100%{
+                transform: rotate(-360deg);
+                filter: hue-rotate(360deg);
+            }
+        }
+        div::after{
+            content: "Animation";
+            position: absolute;
+            height: 92%;
+            width: 92%;
+            left: 8px;
+            top: 8px;
+            border-radius: 5px;
+            background: #2e2e2e;
+            color: #00c3ff;
+            font-size: 1.5em;
+            display: grid;
+            place-items: center;
+            letter-spacing: .05em;
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

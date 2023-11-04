@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            color: #fff;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        body:hover{
+            perspective: 1500px;
+        }
+        .wrapper{
+            width: 300px;
+            height: 300px;
+            position: relative;
+            transition: all 10s;
+            transform: rotateZ(0) rotateX(0) rotateY(0);
+            transform-style: preserve-3d;
+        }
+        .wrapper:hover{
+            transform: rotateZ(0deg) rotateX(90deg) rotateY(310deg);
+        }
+        .face{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transition: all .5s;
+            opacity: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .face:nth-child(1){
+            background-image: url(boys.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transform-origin: center left;
+            transform: rotateY(90deg) translateX(-150px);
+        }
+        .face:nth-child(2){
+            background-image: url(boys.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transform-origin: center left;
+            transform: rotateY(90deg) translateX(-150px);
+        }
+        .face:nth-child(3){
+            background-image: url(boys.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transform-origin: center left;
+            transform: rotateY(90deg) translateX(-150px);
+        }
+        .face:nth-child(4){
+            background-image: url(boys.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transform-origin: center left;
+            transform: rotateY(90deg) translateX(-150px);
+        }
+        .face:nth-child(5){
+            background-image: url(boys.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transform-origin: center left;
+            transform: rotateY(90deg) translateX(-150px);
+        }
+        .face:nth-child(6){
+            background-image: url(boys.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transform-origin: center left;
+            transform: rotateY(90deg) translateX(-150px);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="face" title="boy"></div>
+        <div class="face" title="boy"></div>
+        <div class="face" title="boy"></div>
+        <div class="face" title="boy"></div>
+        <div class="face" title="boy"></div>
+        <div class="face" title="boy"></div>
+    </div>
+</body>
+</html>

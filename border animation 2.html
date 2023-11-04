@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            color: #fff;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            position: relative;
+            height: 400px;
+            width: 400px;
+            border-radius: 20px;
+            background: repeating-conic-gradient(from var(--a),#fc0255 0%, #fc0255 5%, transparent 5%, transparent 40%, #fc0255 50%);
+            animation: animate 4s linear infinite;
+        }
+        @property --a{
+            syntax: '<angle>';
+            inherits: false;
+            initial-value: 0deg;
+        }
+        @keyframes animate {
+            0%{
+                --a: 0deg
+            }
+            100%{
+                --a: 360deg
+            }
+        }
+        .box::before{
+            content: "";
+            position: absolute;
+            inset: 0;
+            height: 100%;
+            width: 100%;
+            border-radius: 20px;
+            background: repeating-conic-gradient(from var(--a),#0699fa 0%, #0699fa 5%, transparent 5%, transparent 40%, #0699fa 50%);
+            animation: animate 4s linear -1s infinite;
+        }
+        .box::after{
+            content: "";
+            position: absolute;
+            inset: 8px;
+            border-radius: 15px;
+            background: #232323;
+            border: 8px solid #000;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
